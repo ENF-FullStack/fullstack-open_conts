@@ -5,3 +5,6 @@ routes/
 views/
 
 app.js
+package.json
+package-lock.json
+.gitignore
