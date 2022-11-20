@@ -1,0 +1,7 @@
+.dockerignore
+.gitignore
+node_modules
+todo_apps
+script-answers
+Dockerfile
+README.md

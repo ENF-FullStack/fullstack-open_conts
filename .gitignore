@@ -5,10 +5,3 @@ routes/
 views/
 
 app.js
-package*
-Dockerfile
-.dockerignore
-
-.gitignore
-package.json
-package-lock.json
