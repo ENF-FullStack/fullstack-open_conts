@@ -1,0 +1,8 @@
+.dockerignore
+.git
+.gitignore
+.env
+npm-debug.log
+node_modules
+Dockerfile
+mongo_data
