@@ -1,6 +1,5 @@
 FROM node:16
 
-#ENV NODE_ENV production
 ENV DEBUG=playground:*
 
 WORKDIR /usr/src/app
