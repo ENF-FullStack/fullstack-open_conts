@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16 AS build-stage
 
 WORKDIR /usr/src/app
 
@@ -12,6 +12,13 @@ ENV REACT_APP_BACKEND_URL="http://localhost:3000"
 
 RUN npm run build
 
-RUN npm install -g serve
+FROM build-stage AS test
 
-CMD ["serve", "build"]
+RUN CI=true npm test
+
+FROM nginx
+
+COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
+
+#RUN npm install -g serve
+#CMD ["serve", "build"]
