@@ -1,6 +1,6 @@
 services:
   app:
-    image: todo-frontend-dev
+    image: todo-frontend
     build: .
     volumes:
       - ./:/usr/src/app
