@@ -7,6 +7,6 @@ COPY . .
 RUN npm install
 
 ENV CHOKIDAR_USEPOLLING=true
-ENV REACT_APP_BACKEND_URL="http://localhost:3000"
+#ENV REACT_APP_BACKEND_URL="http://localhost:3000"
 
 CMD ["npm", "start"]
