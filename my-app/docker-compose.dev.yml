@@ -21,7 +21,7 @@ services:
     volumes:
       - ./phone-backend:/usr/src/app
     ports:
-      - 3001:3000
+      - 3001:3001
     container_name: phone-backend-dev
   nginx:
     image: nginx
