@@ -1,0 +1,8 @@
+.dockerignore
+node_modules/
+cypress/
+Dockerfile
+Dockerfile.old
+cypress.config.old
+healthcheck.old
+fly.old
