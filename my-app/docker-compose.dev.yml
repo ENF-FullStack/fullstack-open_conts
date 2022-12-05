@@ -7,7 +7,7 @@ services:
     volumes:
       - ./phone-frontend:/usr/src/app
     environment:
-      - REACT_APP_BACKEND=./phone-backend/
+      - REACT_APP_BACKEND=http://localhost:3001
     ports:
       - 3000:3000
     container_name: phone-frontend-dev
