@@ -9,6 +9,8 @@ COPY . .
 RUN npm install
 
 #ENV REACT_APP_BACKEND_URL="http://localhost:8080/api"
+
+ENV REACT_APP_BACKEND_URL="http://localhost:8080/api"
 ENV CHOKIDAR_USEPOLLING=true
 
 RUN CI=true npm test

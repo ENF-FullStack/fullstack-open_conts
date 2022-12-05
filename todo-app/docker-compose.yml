@@ -5,8 +5,8 @@ services:
       context: ./todo-frontend
     volumes:
       - ./todo-frontend:/usr/src/app
-    environment:
-      - REACT_APP_BACKEND_URL=http://localhost:8080/api
+#    environment:
+#      - REACT_APP_BACKEND_URL=http://localhost:8080/api
     container_name: todo-frontend
   server:
     image: todo-backend
