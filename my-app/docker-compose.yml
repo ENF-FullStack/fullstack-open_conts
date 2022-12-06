@@ -1,33 +1,33 @@
 services:
   app:
-    image: phone-frontend-dev
+    image: phone-frontend
     build:
       context: ./phone-frontend
-      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:80
     volumes:
       - ./phone-frontend:/usr/src/app
-#    environment:
-#      - REACT_APP_BACKEND=http://localhost:3001
-    ports:
-      - 3000:3000
-    container_name: phone-frontend-dev
+    environment:
+      - REACT_APP_BACKEND=http://localhost:3001
+    container_name: phone-frontend
     depends_on:
       - server
   server:
-    image: phone-backend-dev
+    image: phone-backend
     build:
       context: ./phone-backend
-      dockerfile: dev.Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+     - 3001:3001
     volumes:
       - ./phone-backend:/usr/src/app
-    ports:
-      - 3001:3001
-    container_name: phone-backend-dev
+    container_name: phone-backend
   nginx:
     image: nginx
     build: ./phone-frontend
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.prod.conf:/etc/nginx/nginx.conf:ro
     ports:
       - 8080:80
     container_name: reverse-proxy
